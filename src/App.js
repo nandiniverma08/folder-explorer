@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 
@@ -68,6 +68,14 @@ function App() {
   const handleTooltipLeave = () => {
     setShowTooltip(false);
   };
+
+  useEffect(() => {
+    if (folderSelected) {
+      document.body.classList.add('hide-background');
+    } else {
+      document.body.classList.remove('hide-background');
+    }
+  }, [folderSelected]);
 
   return (
     <div>

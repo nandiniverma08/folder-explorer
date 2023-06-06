@@ -92,3 +92,7 @@ table th {
   bottom: 0;
   z-index: -1;
 }
+
+.hide-background {
+  background-image: none !important;
+}
