@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+
 function FileInfoTooltip({ file }) {
   return (
     <div className="file-info-tooltip">
@@ -70,6 +71,10 @@ function App() {
 
   return (
     <div>
+ <h1 class="heading">
+  <img src="main.jpg" alt="Icon" className="icon" />
+  Welcome and Choose the folder!
+</h1>
       {folderSelected ? null : (
         <label htmlFor="folderInput" className="custom-button">
           Choose Folder
@@ -120,6 +125,7 @@ function App() {
           </tbody>
         </table>
       )}
+       
     </div>
   );
 }

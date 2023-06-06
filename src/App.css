@@ -1,3 +1,23 @@
+body {
+  background-image: url('img3.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%; /* Adjust the value to make the image smaller */
+  background-position: center center; /* Center the background image both horizontally and vertically */
+  background-attachment: fixed; /* Keep the background image fixed while scrolling */
+}
+
+.heading {
+  margin-bottom: 20px; /* Add some spacing between the heading and the background image */
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px; /* Adjust the size as desired */
+  height: 50px;
+  margin-right: 8px; /* Add some spacing between the icon and the text */
+}
+
 .custom-button {
   position: fixed;
   top: 50%;
@@ -6,11 +26,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 120px; /* Increase the width for better visibility */
   height: 40px;
   border: 2px solid black;
   background-color: rgb(154, 150, 150);
   color: white;
+  font-family: Arial, sans-serif; /* Specify the desired font */
+  font-size: 14px; /* Adjust the font size as needed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a box shadow */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add a smooth transition */
+}
+
+.custom-button:hover {
+  background-color: rgb(120, 116, 116); /* Change the background color on hover */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Change the box shadow on hover */
 }
 
 .custom-button input {
@@ -48,4 +79,16 @@ table th {
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
+}
+
+.custom-button::before {
+  content: "";
+  background: url('img3.jpg');
+  opacity: 0.1; /* Adjust the opacity value as desired */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
